@@ -27,8 +27,10 @@ function walk(node) {
 function handleText(textNode)  {
 	var v = textNode.nodeValue;
 
-    v = v.replace(/\bTweet\b/g, "Good Post");
+	v = v.replace(/\bTweet\b/g, "Good Post");
 	v = v.replace(/\btweet\b/g, "good post");
+	v = v.replace(/\bTweets\b/g, "Good Posts");
+	v = v.replace(/\btweets\b/g, "good posts");
 
 	textNode.nodeValue = v;
 }
